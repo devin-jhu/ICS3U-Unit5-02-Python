@@ -2,21 +2,29 @@
 
 # Created by Devin Jhu
 # Created on May 2022
-# The counter
+# The celcius to fahrenheit calculator
+
+
+def area(base, height):
+    # this function converts celsius to fahrenheit
+
+    # process & output
+    area_number = (base * height) / 2
+
+    print("the area of your triangle is {0} cm²".format(area_number))
 
 
 def main():
-    # this program counts
-    counter = 1000
+    # this function get base and height then calls the function
+    height_string = input("Enter height (cm): ")
+    base_string = input("Enter base (cm): ")
+    try:
+        base = int(base_string)
+        height = int(height_string)
+        area(base, height)
 
-    # process & output
-    for counter in range(1000, 2001):
-        if counter % 5 == 0:
-            print("\n{0} ".format(counter), end=" ")
-        else:
-            print("{0} ".format(counter), end=" ")
-
-    counter = counter + 1
+    except Exception:
+        print("not a number")
     print("\nDone.")
 
 
